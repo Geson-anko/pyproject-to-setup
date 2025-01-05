@@ -1,6 +1,6 @@
 [project]
 name = "pyproject-to-setup"
-version = "0.1.0"
+version = "0.1.1"
 description = "Convert pyproject.toml to setup.py"
 readme = "README.md"
 authors = [
@@ -10,6 +10,28 @@ requires-python = ">=3.12"
 dependencies = [
     "click>=8.1.8",
 ]
+
+keywords = [
+  "pyproject",
+  "pyproject.toml",
+  "setup.py",
+  "setuptool",
+  "convert",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: English",
+  "Natural Language :: Japanese",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+
+[project.urls]
+Repository = "https://github.com/Geson-anko/pyproject-to-setup"
+Issues = "https://github.com/Geson-anko/pyproject-to-setup/issues"
 
 [build-system]
 requires = ["hatchling"]
