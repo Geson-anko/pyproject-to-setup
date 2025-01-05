@@ -58,10 +58,6 @@ setuptools.setup(
 - Command line interface and Python API
 - Validation of input files
 
-## Documentation
-
-For detailed usage and API documentation, visit our [documentation site](https://docs.example.com).
-
 ## Development
 
 Requirements:
