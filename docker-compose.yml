@@ -1,0 +1,21 @@
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - pyproject-to-setup:/workspace
+      - uv_cache:/root/.cache/uv
+      - pip_cache:/root/.cache/pip
+      - pre-commit_cache:/root/.cache/pre-commit
+    tty: true
+    stdin_open: true
+    command: /bin/bash
+    working_dir: /workspace
+
+volumes:
+  pyproject-to-setup:
+    name: pyproject-to-setup
+  uv_cache:
+  pip_cache:
+  pre-commit_cache:

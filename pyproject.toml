@@ -1,0 +1,106 @@
+[project]
+name = "pyproject-to-setup"
+version = "0.1.0"
+description = "Convert pyproject.toml to setup.py"
+readme = "README.md"
+authors = [
+    { name = "GesonAnko", email = "59220704+Geson-anko@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.1.8",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.0.1",
+    "pyproject-to-setup",
+    "pyright>=1.1.391",
+    "pytest>=8.3.4",
+    "pytest-cov>=6.0.0",
+    "pytest-mock>=3.14.0",
+    "ruff>=0.8.6",
+    "setuptools>=75.6.0",
+]
+
+[tool.uv.sources]
+pyproject-to-setup = { workspace = true }
+
+[project.scripts]
+pyproject-to-setup = "pyproject_to_setup.cli:main"
+
+
+[tool.pyright]
+pythonVersion = "3.12"
+exclude = [
+  "**/node_modules",
+  "**/__pycache__",
+]
+strict = ["./src/"]
+reportMissingTypeStubs = false
+
+[tool.ruff]
+
+# Same as Black.
+line-length = 88
+indent-width = 4
+
+# Assume Python 3.12
+target-version = "py312"
+
+include = ["*.py"]
+
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".git",
+    ".ipynb_checkpoints",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".venv",
+    ".vscode",
+    "build",
+    "dist",
+    "node_modules",
+    ".venv",
+]
+
+# Linter ignore codes
+[tool.ruff.lint]
+
+select = [
+  "E",
+  "F",
+  "W",
+  "I",
+]
+
+ignore = [
+  "E203", # Whitespace before ':' (E203)
+  "E402", # Module level import not at top of file.
+  "E501", # Line too long (82 &gt; 79 characters) (E501)
+  "F811", # Redefinition of unused name from line n (F811)
+  "E741", # Do not define classes named 'I', 'O', or 'l' (E742)
+  "E266", # too many leading '#' for block comment (E266)
+  "F401", # Module imported but unused,
+]
+
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+
+[tool.ruff.format]
+# Like Black, use double quotes for strings.
+quote-style = "double"
+
+# Like Black, indent with spaces, rather than tabs.
+indent-style = "space"
+
+# Like Black, respect magic trailing commas.
+skip-magic-trailing-comma = false
+
+# Like Black, automatically detect the appropriate line ending.
+line-ending = "auto"
