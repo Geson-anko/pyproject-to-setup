@@ -1,2 +1,3 @@
-def hello() -> str:
-    return "Hello from pyproject-to-setup!"
+from importlib import metadata
+
+__version__ = metadata.version(__name__.replace("_", "-"))
