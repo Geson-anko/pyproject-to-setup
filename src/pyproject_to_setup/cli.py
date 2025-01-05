@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 @click.argument(
     "pyproject_path",
     type=click.Path(exists=True, path_type=Path),
-    default=lambda: "pyproject.toml",
+    default="pyproject.toml",
 )
 @click.option(
     "-m",
