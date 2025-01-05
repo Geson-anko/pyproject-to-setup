@@ -63,13 +63,13 @@ def main(
 
     Examples:
         # Convert pyproject.toml in current directory
-        $ pyproject-converter
+        $ pyproject-to-setup
 
         # Convert specific file with minimal mode
-        $ pyproject-converter path/to/pyproject.toml -m minimal
+        $ pyproject-to-setup path/to/pyproject.toml -m minimal
 
         # Convert and output to different location
-        $ pyproject-converter -o path/to/setup.py
+        $ pyproject-to-setup -o path/to/setup.py
     """
     # Configure logging based on verbosity
     if verbose:
