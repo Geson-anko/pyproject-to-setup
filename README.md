@@ -79,9 +79,9 @@ make docker-up
 
 1. Install `uv`: <https://docs.astral.sh/uv/getting-started/installation/>
 
-```bash
-uv sync
-```
+   ```bash
+   uv sync
+   ```
 
 ## CONTRIBUTING
 

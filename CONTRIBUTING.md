@@ -15,39 +15,39 @@ Thank you for your interest in contributing to pyproject-to-setup! This document
 
 1. Fork and clone the repository:
 
-```bash
-git clone https://github.com/your-username/pyproject-to-setup.git
-cd pyproject-to-setup
-```
+   ```bash
+   git clone https://github.com/your-username/pyproject-to-setup.git
+   cd pyproject-to-setup
+   ```
 
 2. Set up the development environment:
 
-Using Docker (recommended):
+   Using Docker (recommended):
 
-```bash
-# Build development container
-make docker-build
+   ```bash
+   # Build development container
+   make docker-build
 
-# Start container
-make docker-up
+   # Start container
+   make docker-up
 
-# Attach to development shell
-make docker-attach
-```
+   # Attach to development shell
+   make docker-attach
+   ```
 
-Without Docker:
+   Without Docker:
 
-```bash
-# Install uv package manager
-curl -LsSf https://astral.sh/uv/install.sh | sh
+   ```bash
+   # Install uv package manager
+   curl -LsSf https://astral.sh/uv/install.sh | sh
 
-# Create and activate virtual environment
-uv venv
-source .venv/bin/activate
+   # Create and activate virtual environment
+   uv venv
+   source .venv/bin/activate
 
-# Install dependencies
-uv sync
-```
+   # Install dependencies
+   uv sync
+   ```
 
 ## Development Workflow
 
@@ -100,23 +100,23 @@ make type
 
 1. Create a new branch for your feature:
 
-```bash
-git checkout -b feature/name
-```
+   ```bash
+   git checkout -b feature/name
+   ```
 
 2. Make your changes, following our coding standards
 
 3. Run all checks:
 
-```bash
-make run
-```
+   ```bash
+   make run
+   ```
 
 4. Commit your changes with a clear message:
 
-```bash
-git commit -m "Add feature: description of changes"
-```
+   ```bash
+   git commit -m "Add feature: description of changes"
+   ```
 
 5. Push to your fork and submit a pull request
 
